@@ -2,8 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import ProfileNavbar from "./ProfileNavbar/ProfileNavbar";
 import { useAuth } from "../AuthContext";
 import { useNavigate } from 'react-router-dom';
-import { Player } from 'video-react';
-import "video-react/dist/video-react.css";
 import { supabase } from '../supabaseClient';
 
 const UserCourses = () => {
@@ -73,19 +71,6 @@ const UserCourses = () => {
                             )):<div>Loading . . . </div>
                         }
                         
-                        <div className="relative w-full">
-                            <Player
-                                ref={playerRef}
-                                controls
-                                playsInline
-                                src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
-                            />
-                            {showOverlay && (
-                                <div className="absolute inset-0 bg-black bg-opacity-90 flex items-center justify-center z-10">
-
-                                </div>
-                            )}
-                        </div>
                     </div>
                 </div>
             </div>

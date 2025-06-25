@@ -31,9 +31,9 @@ const UserCourse=()=>{
                     const matchedCourse = direUrls.find(course => String(course.course_id) === String(course_id));
 
                     if (matchedCourse) {
-                        console.log(matchedCourse?.course_content_url);
-                        set_videoDirectoryUrls(matchedCourse?.course_content_url);
-                    } else {
+                        set_videoDirectoryUrls(matchedCourse?.course_content_urls);
+                    }
+                    else {
                         console.log("No match found for course_id:", course_id);
                     }
                 }
