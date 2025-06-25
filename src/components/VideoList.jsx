@@ -27,7 +27,7 @@ const VideoList = ({ videos }) => {
               </video>
             </div>
             <p className="mt-3 text-sm text-gray-900 dark:text-white font-medium" style={{textAlign:"left"}}>
-              {video.title +" hell" || `Video ${idx + 1}`}
+            {(video.title ? video.title : `Video ${idx + 1}`)}
             </p>
           </div>
           
